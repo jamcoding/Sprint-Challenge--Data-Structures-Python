@@ -6,7 +6,7 @@ class BSTNode:
 
     def insert(self, value):
         # check if the value is less than the current node's value
-        if value > self.value:
+        if value < self.value:
             # if there is not a left node already here
             if not self.left:
                 # add the node to the left
@@ -14,7 +14,7 @@ class BSTNode:
             else:
                 # otherwise call insert on the left node
                 self.left.insert(value)
-        elif value <= self.value:
+        elif value >= self.value:
             if not self.right:
                 # add the node to the right
                 self.right = BSTNode(value)
